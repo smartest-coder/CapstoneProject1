@@ -5,29 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="/index.css">
+   <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/about">About us</a>
-        </nav>
-        <div class="hero">Welcome to Rajasthan</div>
-    </header>
-
-    <h1>Choose your destination and click on guide button</h1>
-
-    <main id="cardDisplay">
-    </main>
-
-    <footer>
-        <a href="/contactUs">Contact us</a>
-    </footer>
-    
-    <a href="/password/0" class="plus"><img src="plus.svg" alt=""></a>
-    <script src="/index.js"></script>
+    <div class="royal-overlay"></div>
+    <div class="mandala-decoration"></div> <div class="main-container">
+        <div class="login-card">
+            <div class="emblem">𓃗</div> <h1 id="portal-title">Rajasthan Tourism</h1>
+            <p class="subtitle">Secure Heritage Access</p>
+            
+           <form id="login-form">
+    <div class="input-group">
+        <input type="email" id="user-email" placeholder="Email Address" required>
+    </div>
+    <div class="input-group">
+        <input type="password" id="user-pass" placeholder="Password" required>
+    </div>
+    <button type="submit" class="btn-royal" id="main-btn">Sign In</button>
+</form>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
