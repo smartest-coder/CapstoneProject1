@@ -28,6 +28,25 @@
     
     <a href="/password/0" class="plus"><img src="plus.svg" alt=""></a>
     <script src="/index.js"></script>
+    <script>
+    // Fluent Integration Handler: Checks if the user logged in successfully
+    if (localStorage.getItem('userLoginState') === 'authenticated') {
+        // Find the "Login / Sign up" link inside the navigation header
+        const loginMenuButton = document.querySelector('nav a[href="login.html"]');
+        if (loginMenuButton) {
+            // Swap the button text dynamically to show they are logged in!
+            loginMenuButton.textContent = "Sign Out";
+            loginMenuButton.style.borderBottom = "2px solid #ffcc00"; // Royal highlight accent
+            
+            // Allow them to sign out smoothly if they click it
+            loginMenuButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                localStorage.clear(); // Safely clear the login session data
+                window.location.reload(); // Refresh the page to show guest state
+            });
+        }
+    }
+</script>
 </body>
 
 </html>
