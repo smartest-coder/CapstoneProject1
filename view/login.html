@@ -3,83 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Rajasthan Tourism Portal - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1477587458883-47145ed94245?q=80&w=1920&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            padding: 80px 20px;
-            text-align: center;
-        }
-        nav {
+            height: 100vh;
             display: flex;
             justify-content: center;
-            gap: 30px;
-            margin-bottom: 30px;
+            align-items: center;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1477587458883-47145ed94245?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
         }
-        nav a {
+        .login-card {
+            width: 400px;
+            padding: 40px 35px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 24px;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+            text-align: center;
             color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
-            transition: color 0.3s;
         }
-        nav a:hover {
+        .logo-horse {
+            font-size: 40px;
             color: #ffcc00;
-        }
-        .hero {
-            color: #ffffff;
-            font-size: 42px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            margin-bottom: 12px;
+            filter: drop-shadow(0 2px 5px rgba(0,0,0,0.3));
         }
         h1 {
-            text-align: center;
-            margin: 40px 20px 20px;
-            color: #b58d3d;
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #ffffff;
+            margin-bottom: 4px;
         }
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            margin-top: 40px;
+        .subtitle {
+            font-size: 13px;
+            color: #e0e0e0;
+            margin-bottom: 35px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
         }
-        footer a {
-            color: #333;
+        .input-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 14px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            outline: none;
+            border-radius: 30px;
+            color: #ffffff;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .input-group input:focus {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: #ffcc00;
+            box-shadow: 0 0 12px rgba(255, 204, 0, 0.3);
+        }
+        .input-group input::placeholder {
+            color: #f0f0f0;
+        }
+        .btn-royal {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(90deg, #ff9933, #ffcc00);
+            border: none;
+            border-radius: 30px;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(255, 153, 51, 0.3);
+        }
+        .btn-royal:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 204, 0, 0.4);
+        }
+        .divider {
+            margin: 22px 0;
+            font-size: 12px;
+            color: #e0e0e0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .divider::before, .divider::after {
+            content: "";
+            flex: 1;
+            background: rgba(255,255,255,0.25);
+            height: 1px;
+            margin: 0 10px;
+        }
+        .btn-secondary {
+            width: 100%;
+            padding: 12px;
+            background: transparent;
+            border: 1px solid #ffffff;
+            border-radius: 30px;
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background: #ffffff;
+            color: #000000;
+        }
+        .forgot-link {
+            display: inline-block;
+            margin-top: 18px;
+            font-size: 12px;
+            color: #e0e0e0;
             text-decoration: none;
-            font-weight: bold;
+            transition: color 0.2s;
+        }
+        .forgot-link:hover {
+            color: #ffcc00;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="login.html">Login / Sign up</a>
-            <a href="about.html">About us</a>
-        </nav>
-        <div class="hero">Welcome to Rajasthan</div>
-    </header>
+    <div class="login-card">
+        <div class="logo-horse">🐎</div>
+        <h1>Rajasthan Tourism</h1>
+        <p class="subtitle">Discover Royal Heritage</p>
+        
+        <form id="loginForm">
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Enter Email ID" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Enter Password" required>
+            </div>
+            <button type="submit" class="btn-royal">Sign In</button>
+        </form>
 
-    <h1>Choose your destination and click on guide button</h1>
-    
-    <main id="cardDisplay"></main>
+        <div class="divider">OR</div>
+        <button class="btn-secondary" onclick="window.location.href='index.html'">Create Account</button>
+        <a href="#" class="forgot-link">Forgot Password?</a>
+    </div>
 
-    <footer>
-        <a href="contact.html">Contact us</a>
-    </footer>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Set session flags so your team's code knows a user is active
+            localStorage.setItem('isLoggedIn', 'true');
+            localStorage.setItem('userEmail', document.getElementById('email').value);
+
+            // Redirect back to main site flawlessly
+            window.location.href = 'index.html';
+        });
+    </script>
 
 </body>
 </html>
